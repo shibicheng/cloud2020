@@ -36,5 +36,9 @@ public class PaymentController {
             return  new CommonResult(200,"查询失败,serverPort"+serverPort,null);
         }
     }
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
 
 }
